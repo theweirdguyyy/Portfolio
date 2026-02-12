@@ -27,13 +27,18 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
 
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
     try {
       console.log("From submitted:", formData); 
       //EmailJs gmail Service Id :: service_7dvksyw
-      //EmailJs template Service Id ::template_dv906pe
+      //EmailJs template Service Id :: template_dv906pe
+      //EmailJs public key :: 8DCE0mYzTGmQp-C9U
       await emailjs.send(
-        "service_7dvksyw",
-        "template_dv906pe",
+        serviceId,
+        templateId,
         {
           from_name: formData.name,
           to_name: "SoEb",
@@ -41,7 +46,7 @@ const Contact = () => {
           to_email: "soebshihab@gmail.com",
           message: formData.message,
         },
-        "8DCE0mYzTGmQp-C9U"
+        publicKey
       );
       setIsLoading(false);
       setFormData({ name: "", email: "", message: "" });
@@ -52,6 +57,8 @@ const Contact = () => {
       showAlertMessage("danger", "Somthing went wrong!");
     }
   };
+
+  console.log("Service ID Check:", import.meta.env.VITE_EMAILJS_SERVICE_ID);
   return (
     <section id="contact" className="relative flex items-center c-space section-spacing">
       <Particles
