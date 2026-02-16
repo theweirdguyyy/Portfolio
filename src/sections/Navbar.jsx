@@ -29,6 +29,7 @@ function Navigation() {
           href={resumeLink} 
           target="_blank" 
           rel="noreferrer" 
+          download="Resume - Md Shihab Rayhan (SoEb).pdf"
           className="px-4 py-2 text-sm transition-all rounded-lg bg-royal text-white hover:bg-lavender"
         >
           Resume

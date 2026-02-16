@@ -126,6 +126,7 @@ const About = () => {
               href={resumeLink} 
               target="_blank" 
               rel="noreferrer"
+              download="Resume - Md Shihab Rayhan (SoEb).pdf"
               className="group inline-flex items-center gap-3 px-6 py-3 text-sm font-semibold text-white transition-all rounded-xl bg-royal hover:bg-lavender active:scale-95 shadow-lg shadow-black/20"
             >
               View My CV
