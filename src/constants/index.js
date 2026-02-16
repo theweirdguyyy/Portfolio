@@ -335,4 +335,4 @@ export const reviews = [
   },
 ];
 
-export const resumeLink = "/assets/resume.pdf";
+export const resumeLink = "/assets/Resume_Md_Shihab_Rayhan_SoEb.pdf";
