@@ -3,6 +3,7 @@ import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/Frameworks";
+import { resumeLink } from "../constants";
 
 const About = () => {
   const grid2Container = useRef();
@@ -108,15 +109,36 @@ const About = () => {
           </div>
         </div>
         {/* Grid 5 */}
-        <div className="grid-default-color grid-5">
-          <div className="z-10 w-[50%]">
-            <p className="headText">Teck Stack</p>
-            <p className="subtext">
+        <div className="grid-default-color grid-5 relative flex flex-col justify-between overflow-hidden min-h-[20rem] md:min-h-full">
+          
+          {/* Top Text Content */}
+          <div className="z-20">
+            <p className="headtext">Tech Stack</p>
+            <p className="subtext max-w-xs">
               I specialize in a variety of languages, frameworks, and tools that
-              allow me to build robust and scalable applications.
+              allow me to build robust applications.
             </p>
           </div>
-          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
+
+          {/* Bottom Button Content */}
+          <div className="z-20 mt-auto pt-4">
+            <a 
+              href={resumeLink} 
+              target="_blank" 
+              rel="noreferrer"
+              className="group inline-flex items-center gap-3 px-6 py-3 text-sm font-semibold text-white transition-all rounded-xl bg-royal hover:bg-lavender active:scale-95 shadow-lg shadow-black/20"
+            >
+              View My CV
+              <img 
+                src="assets/arrow-up.svg" 
+                className="rotate-45 size-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" 
+                alt="arrow" 
+              />
+            </a>
+          </div>
+
+          {/* Background Animation - Managed with absolute positioning */}
+          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[40%] md:start-[50%] md:scale-125 pointer-events-none opacity-50 md:opacity-100">
             <Frameworks />
           </div>
         </div>

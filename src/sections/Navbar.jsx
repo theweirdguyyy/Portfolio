@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { resumeLink } from "../constants";
 function Navigation() {
   return (
     <ul className="nav-ul">
@@ -21,6 +22,16 @@ function Navigation() {
       <li className="nav-li">
         <a className="nav-link" href="#contact">
           Contact
+        </a>
+      </li>
+      <li className="nav-li">
+        <a 
+          href={resumeLink} 
+          target="_blank" 
+          rel="noreferrer" 
+          className="px-4 py-2 text-sm transition-all rounded-lg bg-royal text-white hover:bg-lavender"
+        >
+          Resume
         </a>
       </li>
     </ul>

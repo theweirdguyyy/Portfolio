@@ -334,3 +334,5 @@ export const reviews = [
     img: "https://robohash.org/eve",
   },
 ];
+
+export const resumeLink = "/assets/resume.pdf";

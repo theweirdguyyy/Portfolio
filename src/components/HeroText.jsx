@@ -1,6 +1,7 @@
 import { FlipWords } from "./FlipWords";
 import { motion } from "framer-motion";
 
+
 const HeroText = () => {
   const words = ["Secure", "Modern", "Scalable"];
   const variants = {
